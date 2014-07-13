@@ -11,7 +11,7 @@ import flash.Lib;
 import openfl.Assets;
 
 
-class PiratePig extends Sprite {
+class Main extends Sprite {
 	
 	
 	private var Background:Bitmap;

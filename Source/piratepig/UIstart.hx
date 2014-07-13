@@ -53,6 +53,10 @@ class UIstart extends Sprite
 	// resizing the startup-UI...
 	public function resize (newWidth:Int, newHeight:Int):Void {
 		
+		// TODO:  	implement your own algorithm to
+		// 			calculate the optimal width & height of your app
+		// 			(what's down there now is just an example...)
+		
 		var maxWidth = newWidth * 0.90;
 		var maxHeight = newHeight * 0.86;
 		

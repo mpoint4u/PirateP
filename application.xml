@@ -8,7 +8,7 @@
 	<!-- output 	
 <app main="Main" file="PirateP" path="bin" />
 -->
-	<app path="Export" file="PirateP" main="piratepig.PiratePig" />
+	<app path="Export" file="PirateP" main="piratepig.Main" />
 	
 <!--	<window background="#000000" fps="60" />
 	<window width="800" height="480" unless="mobile" />
