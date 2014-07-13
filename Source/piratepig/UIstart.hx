@@ -1,6 +1,9 @@
 package piratepig;
 
+import openfl.Assets;
 import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.media.Sound;
 
 /**
  * ...
@@ -8,8 +11,13 @@ import openfl.display.Sprite;
  */
 class UIstart extends Sprite
 {
-	// member vars
+	// public member vars
 	public var currentScale:Float;
+	
+	//private member vars
+	private var IntroSound:Sound;	
+	
+	
 	// TODO remove later, as this is only used for Tile - layout
 	private static var NUM_COLUMNS = 8;
 	private static var NUM_ROWS = 8;	
@@ -19,7 +27,28 @@ class UIstart extends Sprite
 	public function new() 
 	{
 		super();
+		initialize ();
+		construct ();
+		newGame ();		
 	}
+	
+	private function initialize():Void {
+		
+	}
+	
+	private function construct ():Void {
+		
+		IntroSound = Assets.getSound ("soundTheme");		
+		}
+		
+	public function newGame ():Void {
+				
+		IntroSound.play ();
+		
+		//removeEventListener (Event.ENTER_FRAME, this_onEnterFrame);
+		//addEventListener (Event.ENTER_FRAME, this_onEnterFrame);	
+	}
+			
 	
 	// resizing the startup-UI...
 	public function resize (newWidth:Int, newHeight:Int):Void {
