@@ -34,7 +34,7 @@ class Main extends Sprite {
 	
 	
 	private function construct ():Void {
-		
+			trace("called construct() in Main.hx ...");		
 		Footer.smoothing = true;   // has a really nice effect !!
 		
 		// add all UI components to the stage...
@@ -45,7 +45,7 @@ class Main extends Sprite {
 	
 	
 	private function initialize ():Void {
-		
+			trace("called initialize() in Main.hx ...");
 		Background = new Bitmap (Assets.getBitmapData ("images/background_tile.png"));
 		Footer = new Bitmap (Assets.getBitmapData ("images/center_bottom.png"));
 		//Game = new PiratePigGame ();
@@ -54,7 +54,7 @@ class Main extends Sprite {
 	
 	
 	private function resize (newWidth:Int, newHeight:Int):Void {
-		
+			trace("called resize() in Main.hx ...");			
 		Background.width = newWidth;
 		Background.height = newHeight;
 		
@@ -62,6 +62,7 @@ class Main extends Sprite {
 		
 		Footer.scaleX = FirstUI.currentScale;
 		Footer.scaleY = FirstUI.currentScale;
+			trace("FirstUI.currentScale has a value of..." + FirstUI.currentScale);			
 		Footer.x = newWidth / 2 - Footer.width / 2;
 		Footer.y = newHeight - Footer.height;
 		
@@ -70,9 +71,9 @@ class Main extends Sprite {
 	
 	private function stage_onResize (event:Event):Void {
 		
-		resize (stage.stageWidth, stage.stageHeight);
+			trace("called stage_onResize() in Main.hx ...");
 		
+		resize (stage.stageWidth, stage.stageHeight);
 	}
 	
-	
-}
+} // end of class 'Main'

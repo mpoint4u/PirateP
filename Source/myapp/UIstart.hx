@@ -29,20 +29,22 @@ class UIstart extends Sprite
 		super();
 		initialize ();
 		construct ();
-		newGame ();		
+		newScene ();		
 	}
 	
 	private function initialize():Void {
-		
+			trace("called initialize() in UIstart.hx ...");		
 	}
 	
 	private function construct ():Void {
-		
+			trace("called construct() in UIstart.hx ...");
+			
 		IntroSound = Assets.getSound ("soundTheme");		
 		}
 		
-	public function newGame ():Void {
-				
+	public function newScene ():Void {
+			trace("called newScene() in UIstart.hx ...");
+			
 		IntroSound.play ();
 		
 		//removeEventListener (Event.ENTER_FRAME, this_onEnterFrame);
@@ -52,10 +54,12 @@ class UIstart extends Sprite
 	
 	// resizing the startup-UI...
 	public function resize (newWidth:Int, newHeight:Int):Void {
-		
+
 		// TODO:  	implement your own algorithm to
 		// 			calculate the optimal width & height of your app
 		// 			(what's down there now is just an example...)
+		
+			trace("called resize() in UIstart.hx ...");			
 		
 		var maxWidth = newWidth * 0.90;
 		var maxHeight = newHeight * 0.86;
@@ -96,8 +100,7 @@ class UIstart extends Sprite
 			
 		}
 		
-		x = newWidth / 2 - (currentWidth * currentScale) / 2;
-		
+		x = newWidth / 2 - (currentWidth * currentScale) / 2;		
 	}	
 	
-}
+} // end of class 'UIstart'
