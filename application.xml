@@ -6,8 +6,9 @@
 	<meta title="PirateP" package="com.example.PirateP" version="1.0.0" company="pm" />
 	
 	<!-- output 	
-	<app main="Main" file="PirateP" path="bin" />	--that is the OpenFl standard-->
 	<app path="Export" file="PirateP" main="myapp.Main" />
+						--that is the OpenFl standard-->
+	<app main="Main" file="PirateP" path="Export" />
 	
 <!--	<window background="#000000" fps="60" />
 	<window width="800" height="480" unless="mobile" />
@@ -33,6 +34,8 @@
 	<icon path="Assets/images/openfl.svg" />
 	
 	<assets path="Assets/sounds" rename="sounds" if="web">
+		<sound path="3.mp3" id="sound3" />		
+		<sound path="4.mp3" id="sound4" />		
 		<sound path="5.mp3" id="sound5" />
 		<music path="theme.mp3" id="soundTheme" />
 	</assets>
@@ -40,6 +43,8 @@
 	<assets path="Assets/sounds" rename="sounds" if="html5" />
 	
 	<assets path="Assets/sounds" rename="sounds" unless="web">
+		<sound path="3.wav" id="sound3" />		
+		<sound path="4.wav" id="sound4" />		
 		<sound path="5.wav" id="sound5" />
 		<music path="theme.ogg" id="soundTheme" />
 	</assets>

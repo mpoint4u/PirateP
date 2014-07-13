@@ -1,4 +1,4 @@
-package myapp ;
+package  ;
 
 
 import flash.display.Bitmap;
@@ -8,6 +8,7 @@ import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.system.Capabilities;
 import flash.Lib;
+import myapp.PiratePigGame;
 import openfl.Assets;
 
 
@@ -17,7 +18,8 @@ class Main extends Sprite {
 	private var Background:Bitmap;
 	private var Footer:Bitmap;
 	//private var Game:PiratePigGame;
-	private var FirstUI:UIstart;
+	//private var FirstUI:UIstart;
+	private var FirstUI:PiratePigGame;
 	
 	
 	public function new () {
@@ -48,8 +50,8 @@ class Main extends Sprite {
 			trace("called initialize() in Main.hx ...");
 		Background = new Bitmap (Assets.getBitmapData ("images/background_tile.png"));
 		Footer = new Bitmap (Assets.getBitmapData ("images/center_bottom.png"));
-		//Game = new PiratePigGame ();
-		FirstUI = new UIstart();
+		FirstUI = new PiratePigGame ();
+		//FirstUI = new UIstart();
 	}
 	
 	

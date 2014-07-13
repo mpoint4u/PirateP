@@ -1,4 +1,4 @@
-package myapp ;
+package  ;
 
 import openfl.Assets;
 import openfl.display.Sprite;
