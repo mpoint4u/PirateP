@@ -1,4 +1,4 @@
-package piratepig;
+package myapp ;
 
 
 import flash.display.Bitmap;
@@ -17,7 +17,7 @@ class Main extends Sprite {
 	private var Background:Bitmap;
 	private var Footer:Bitmap;
 	//private var Game:PiratePigGame;
-	private var Game:UIstart;
+	private var FirstUI:UIstart;
 	
 	
 	public function new () {
@@ -35,14 +35,12 @@ class Main extends Sprite {
 	
 	private function construct ():Void {
 		
-		Footer.smoothing = true;
+		Footer.smoothing = true;   // has a really nice effect !!
 		
 		// add all UI components to the stage...
 		addChild (Background);
 		addChild (Footer);
-		addChild (Game);
-		//addChild (startupUI);
-		
+		addChild (FirstUI);     //means the same here as ... addChild (startupUI);		
 	}
 	
 	
@@ -51,9 +49,7 @@ class Main extends Sprite {
 		Background = new Bitmap (Assets.getBitmapData ("images/background_tile.png"));
 		Footer = new Bitmap (Assets.getBitmapData ("images/center_bottom.png"));
 		//Game = new PiratePigGame ();
-		Game = new UIstart();
-		
-		
+		FirstUI = new UIstart();
 	}
 	
 	
@@ -62,10 +58,10 @@ class Main extends Sprite {
 		Background.width = newWidth;
 		Background.height = newHeight;
 		
-		Game.resize (newWidth, newHeight);
+		FirstUI.resize (newWidth, newHeight);
 		
-		Footer.scaleX = Game.currentScale;
-		Footer.scaleY = Game.currentScale;
+		Footer.scaleX = FirstUI.currentScale;
+		Footer.scaleY = FirstUI.currentScale;
 		Footer.x = newWidth / 2 - Footer.width / 2;
 		Footer.y = newHeight - Footer.height;
 		

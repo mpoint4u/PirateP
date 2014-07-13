@@ -1,4 +1,4 @@
-package piratepig;
+package myapp ;
 
 import openfl.Assets;
 import openfl.display.Sprite;

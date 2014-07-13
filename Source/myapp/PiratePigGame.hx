@@ -1,4 +1,4 @@
-package piratepig;
+package myapp ;
 
 
 import flash.display.Bitmap;
