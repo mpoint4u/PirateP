@@ -18,8 +18,8 @@ class Main extends Sprite {
 	private var Background:Bitmap;
 	private var Footer:Bitmap;
 	//private var Game:PiratePigGame;
-	//private var FirstUI:UIstart;
-	private var FirstUI:PiratePigGame;
+	private var FirstUI:UIstart;
+	//private var FirstUI:PiratePigGame;
 	
 	
 	public function new () {
@@ -50,8 +50,8 @@ class Main extends Sprite {
 			trace("called initialize() in Main.hx ...");
 		Background = new Bitmap (Assets.getBitmapData ("images/background_tile.png"));
 		Footer = new Bitmap (Assets.getBitmapData ("images/center_bottom.png"));
-		FirstUI = new PiratePigGame ();
-		//FirstUI = new UIstart();
+		//FirstUI = new PiratePigGame ();
+		FirstUI = new UIstart();
 	}
 	
 	
