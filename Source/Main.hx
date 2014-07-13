@@ -8,7 +8,7 @@ import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.system.Capabilities;
 import flash.Lib;
-import myapp.PiratePigGame;
+import piratepig.PiratePigGame;
 import openfl.Assets;
 
 

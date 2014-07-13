@@ -1,4 +1,4 @@
-package myapp ;
+package piratepig;
 
 
 import flash.display.Bitmap;
@@ -16,6 +16,7 @@ import flash.Lib;
 import motion.Actuate;
 import motion.easing.Quad;
 import openfl.Assets;
+//import piratepig.Tile;
 
 
 class PiratePigGame extends Sprite {
