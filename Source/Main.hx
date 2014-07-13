@@ -38,10 +38,11 @@ class Main extends Sprite {
 			trace("called construct() in Main.hx ...");		
 		Footer.smoothing = true;   // has a really nice effect !!
 		
-		// add all UI components to the stage...
-		addChild (Background);
-		addChild (Footer);
-		addChild (FirstUI);     //means the same here as ... addChild (startupUI);		
+		// add all UI components to the stage LIKE THIS !!!!!...
+		//       flash.Lib.current.stage.addChild(...);
+		flash.Lib.current.stage.addChild (Background);
+		flash.Lib.current.stage.addChild (Footer);
+		flash.Lib.current.stage.addChild (FirstUI);     //means the same here as ... addChild (startupUI);		
 	}
 	
 	
