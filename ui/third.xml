@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Widget id="'myMain'" w="480" h="800">
+  <ColorWidget id="'custom'" w="200" h="100" color="0xFF80FF"/>
+  <VBox id="'myVBox'" skin:Paint-border="1" w="400" h="700" left="#ColorWidget(custom).x" top="#ColorWidget(custom).y" padding="20" childPadding="7" on-click="trace($this.w);">
+    <Button text="'set custom color'" skin:Paint-color="0x999999" on-click="#ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh();"/>
+    <HBox skin:Paint-border="1" padding="2" childPadding="5">
+      <Text skin:Paint-border="1" text="'1st text widget!'" skin:Paint-color="0x71E34F" w="90" h="50"/>
+      <Text skin:Paint-border="1" text="'2nd text widget!'" skin:Paint-color="0x4899EA" w="90" h="50"/>
+    </HBox>
+    <HBox skin:Paint-border="1" padding="2" childPadding="5">		
+		<Text skin:Paint-border="1" text="'3rd text widget!'" skin:Paint-color="0xF96039" w="90" h="50"/>
+		<Text skin:Paint-border="1" text="'4th text widget!'" skin:Paint-color="0xF2D840" w="90" h="50"/>
+	</HBox>
+    <Button text="'set random color'" skin:Paint-color="0x999999" on-click="trace( Type.typeof( #custom ) );"/>
+  </VBox>
+</Widget>

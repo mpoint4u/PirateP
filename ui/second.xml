@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<HBox padding="20" childPadding="20">
+  <ColorWidget id="'custom'" w="200" h="100" color="0xFF80FF"/>
+  <Button text="'set custom color'" skin:Paint-color="0x999999" on-click="#ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh();"/>
+</HBox>

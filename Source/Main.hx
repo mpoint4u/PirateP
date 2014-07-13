@@ -1,6 +1,5 @@
 package  ;
 
-
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Sprite;
@@ -10,6 +9,7 @@ import flash.system.Capabilities;
 import flash.Lib;
 import piratepig.PiratePigGame;
 import openfl.Assets;
+import ru.stablex.ui.UIBuilder;
 
 
 class Main extends Sprite {
@@ -30,8 +30,7 @@ class Main extends Sprite {
 		construct ();
 		
 		resize (stage.stageWidth, stage.stageHeight);
-		stage.addEventListener (Event.RESIZE, stage_onResize);
-		
+		stage.addEventListener (Event.RESIZE, stage_onResize);	
 	}
 	
 	
@@ -48,6 +47,14 @@ class Main extends Sprite {
 	
 	private function initialize ():Void {
 			trace("called initialize() in Main.hx ...");
+
+		// general init of StablexUI	
+		UIBuilder.init();
+		trace("initializing Stablex UI Builder ...");				
+			
+			
+			
+			
 		Background = new Bitmap (Assets.getBitmapData ("images/background_tile.png"));
 		Footer = new Bitmap (Assets.getBitmapData ("images/center_bottom.png"));
 		//FirstUI = new PiratePigGame ();

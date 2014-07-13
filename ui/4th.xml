@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Widget h="800" id="'myMain'" w="480">
+   <ColorWidget color="0xFF80FF" h="100" id="'custom'" w="200"></ColorWidget>
+   <VBox h="700" top="#ColorWidget(custom).y" id="'myVBox'" padding="20" childPadding="7" on-click="trace($this.w);" w="400" skin:Paint-border="1" left="#ColorWidget(custom).x">
+      <HBox padding="15" childPadding="5" skin:Paint-color="0x999999" skin:Paint-border="1">
+         <VBox padding="5" skin:Paint-border="1">
+            <Text text="'2nd text widget!'" skin:Paint-color="0x4899EA" skin:Paint-border="1" w="90" h="25"></Text>
+            <Text text="'5th text widget'" skin:Paint-color="0xe712ea" skin:Paint-border="1" w="90" h="25"></Text>
+            <Text text="'1st text widget!'" skin:Paint-color="0x99ff00" skin:Paint-border="1" w="90" h="25"></Text>
+         </VBox>
+         <VBox padding="5" skin:Paint-border="1">
+            <Text text="'3rd text widget!'" skin:Paint-color="0xabd0bc" skin:Paint-border="1" w="90" h="50"></Text>
+            <Button text="'set custom color'" skin:Paint-color="0xC0C0C0" on-click="#ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh();"></Button>
+         </VBox>
+      </HBox>
+      <HBox padding="15" childPadding="5" skin:Paint-color="0x69b1a9" skin:Paint-border="1">
+         <Text text="'4th text widget!'" skin:Paint-color="0x99ff00" skin:Paint-border="1" w="90" h="150"></Text>
+         <Button text="'set random color'" skin:Paint-color="0x999999" on-click="trace( Type.typeof( #custom ) );"></Button>
+      </HBox>
+   </VBox>
+</Widget>

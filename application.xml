@@ -23,6 +23,7 @@
 	
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
+	<haxelib name="stablexui" />	
 
 	<ios binaries="armv7" />
 	
@@ -30,6 +31,8 @@
 	<!-- assets -->
 	<assets path="Assets/fonts" rename="fonts" include="*.ttf" />
 	<assets path="Assets/images" rename="images" include="*" exclude="icon.svg" />
+	
+<!--	<assets path="Assets/ui" rename="ui" include="*" exclude="icon.svg" />-->
 	
 	<icon path="Assets/images/openfl.svg" />
 	

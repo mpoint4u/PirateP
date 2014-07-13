@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Widget item="y" tlversion="1.4.1"
+line0="Widget"
+line1="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line2="id=&quot;{*id*}&quot;">
+<skin:Paint-color type="Text" ref="y">0xAFA6D5</skin:Paint-color>
+<id type="Text">'myMain'</id>
+<ColorWidget item="y"
+line0="ColorWidget"
+line1="color=&quot;{*color*}&quot;"
+line2="h=&quot;{*h*}&quot;"
+line3="top=&quot;{*top*}&quot;"
+line4="w=&quot;{*w*}&quot;"
+line5="id=&quot;{*id*}&quot;"
+line6="left=&quot;{*left*}&quot;">
+<color type="Text" ref="y">0xFF80FF</color>
+<h type="Text">600</h>
+<top type="Text">(flash.Lib.current.stage.stageHeight - $this.h)/2</top>
+<w type="Text">flash.Lib.current.stage.stageWidth</w>
+<id type="Text">'custom'</id>
+<left type="Text">0</left>
+</ColorWidget>
+<VBox item="y"
+line0="VBox"
+line1="h=&quot;{*h*}&quot;"
+line2="top=&quot;{*top*}&quot;"
+line3="id=&quot;{*id*}&quot;"
+line4="padding=&quot;{*padding*}&quot;"
+line5="childPadding=&quot;{*childPadding*}&quot;"
+line6="on-click=&quot;{*on-click*}&quot;"
+line7="w=&quot;{*w*}&quot;"
+line8="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
+line9="left=&quot;{*left*}&quot;">
+<h type="Text" ref="y">#ColorWidget(custom).h</h>
+<top type="Text">#ColorWidget(custom).y</top>
+<id type="Text">'myVBox'</id>
+<padding type="Text">20</padding>
+<childPadding type="Text">7</childPadding>
+<on-click type="Text">trace('size of VBox is now.. ' + $this.w);</on-click>
+<w type="Text">#ColorWidget(custom).w</w>
+<skin:Paint-border type="Text">1</skin:Paint-border>
+<left type="Text">#ColorWidget(custom).x</left>
+<HBox item="y"
+line0="HBox"
+line1="padding=&quot;{*padding*}&quot;"
+line2="childPadding=&quot;{*childPadding*}&quot;"
+line3="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line4="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;">
+<padding type="Text" ref="y">15</padding>
+<childPadding type="Text">5</childPadding>
+<skin:Paint-color type="Text">0x999999</skin:Paint-color>
+<skin:Paint-border type="Text">1</skin:Paint-border>
+<VBox item="y">
+<padding>5</padding>
+<skin:Paint-border>1</skin:Paint-border>
+<Text item="y"
+line0="Text"
+line1="text=&quot;{*text*}&quot;"
+line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line3="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
+line4="w=&quot;{*w*}&quot;"
+line5="h=&quot;{*h*}&quot;">
+<text type="Text" ref="y">'2nd text widget!'</text>
+<skin:Paint-color type="Text">0x4899EA</skin:Paint-color>
+<skin:Paint-border type="Text">1</skin:Paint-border>
+<w type="Text">90</w>
+<h type="Text">25</h>
+</Text>
+<Text item="y">
+<text>'5th text widget'</text>
+<skin:Paint-color>0xe712ea</skin:Paint-color>
+<skin:Paint-border>1</skin:Paint-border>
+<w>90</w>
+<h>25</h>
+</Text>
+<Text item="y">
+<text>'1st text widget!'</text>
+<skin:Paint-color>0x99ff00</skin:Paint-color>
+<skin:Paint-border>1</skin:Paint-border>
+<w>90</w>
+<h>25</h>
+</Text>
+</VBox>
+<VBox item="y">
+<padding>5</padding>
+<skin:Paint-border>1</skin:Paint-border>
+<Text item="y">
+<text>'3rd text widget!'</text>
+<skin:Paint-color>0xabd0bc</skin:Paint-color>
+<skin:Paint-border>1</skin:Paint-border>
+<w>90</w>
+<h>50</h>
+</Text>
+<Button item="y"
+line0="Button"
+line1="text=&quot;{*text*}&quot;"
+line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line3="on-click=&quot;{*on-click*}&quot;">
+<text type="Text" ref="y">'set custom color'</text>
+<skin:Paint-color type="Text">0xC0C0C0</skin:Paint-color>
+<on-click type="Text">#ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh();</on-click>
+</Button>
+</VBox>
+</HBox>
+<HBox item="y">
+<padding>15</padding>
+<childPadding>5</childPadding>
+<skin:Paint-color>0x69b1a9</skin:Paint-color>
+<skin:Paint-border>1</skin:Paint-border>
+<Text item="y">
+<text>'4th text widget!'</text>
+<skin:Paint-color>0x99ff00</skin:Paint-color>
+<skin:Paint-border>1</skin:Paint-border>
+<w>90</w>
+<h>150</h>
+</Text>
+<Button item="y">
+<text>'set random color'</text>
+<skin:Paint-color>0x999999</skin:Paint-color>
+<on-click>trace( Type.typeof( #custom ) );</on-click>
+</Button>
+</HBox>
+</VBox>
+</Widget>

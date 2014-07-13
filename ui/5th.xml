@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Widget skin:Paint-color="0xAFA6D5" id="'myMain'">
+   <ColorWidget color="0xFF80FF" h="600" top="(flash.Lib.current.stage.stageHeight - $this.h)/2" w="flash.Lib.current.stage.stageWidth" id="'custom'" left="0"></ColorWidget>
+   <VBox h="#ColorWidget(custom).h" top="#ColorWidget(custom).y" id="'myVBox'" padding="20" childPadding="7" on-click="trace('size of VBox is now.. ' + $this.w);" w="#ColorWidget(custom).w" skin:Paint-border="1" left="#ColorWidget(custom).x">
+      <HBox padding="15" childPadding="5" skin:Paint-color="0x999999" skin:Paint-border="1">
+         <VBox padding="5" skin:Paint-border="1">
+            <Text text="'2nd text widget!'" skin:Paint-color="0x21c374" skin:Paint-border="1" w="90" h="25"></Text>
+            <Text text="'5th text widget'" skin:Paint-color="0xe712ea" skin:Paint-border="1" w="90" h="25"></Text>
+            <Text text="'1st text widget!'" skin:Paint-color="0x99ff00" skin:Paint-border="1" w="90" h="25"></Text>
+         </VBox>
+         <VBox padding="5" skin:Paint-border="1">
+            <Text text="'3rd text widget!'" skin:Paint-color="0xabd0bc" skin:Paint-border="1" w="90" h="50"></Text>
+            <Button text="'set custom color'" skin:Paint-color="0xC0C0C0" on-click="#ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh();"></Button>
+         </VBox>
+      </HBox>
+      <HBox padding="15" childPadding="5" skin:Paint-color="0x69b1a9" skin:Paint-border="1">
+         <Text text="'4th text widget!'" skin:Paint-color="0x99ff00" skin:Paint-border="1" w="90" h="150"></Text>
+         <Button text="'set random color'" skin:Paint-color="0x999999" on-click="trace( Type.typeof( #custom ) );"></Button>
+      </HBox>
+   </VBox>
+</Widget>

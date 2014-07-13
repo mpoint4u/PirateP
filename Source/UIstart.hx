@@ -4,6 +4,7 @@ import openfl.Assets;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.media.Sound;
+import ru.stablex.ui.UIBuilder;
 
 /**
  * ...
@@ -28,16 +29,31 @@ class UIstart extends Sprite
 	{
 		super();
 		initialize ();
-		construct ();
+		constructUI ();
 		newScene ();		
 	}
 	
 	private function initialize():Void {
-			trace("called initialize() in UIstart.hx ...");		
+			trace("called initialize() in UIstart.hx ...");
+			
+		UIBuilder.regClass('ColorWidget');		
+			trace("regClass('ColorWidget') from initialize() in UIstart.hx");
 	}
 	
-	private function construct ():Void {
-			trace("called construct() in UIstart.hx ...");
+	private function constructUI ():Void {
+			trace("called constructUI() in UIstart.hx ...");
+			
+		addChild( UIBuilder.buildFn(
+	//					'ui/first.xml'
+	//					'ui/second.xml'
+	//				'ui/third.xml'
+	//				'ui/4th.xml'
+					'ui/5th.xml'
+				
+													)() );
+		
+		trace("added new widget as child to stage...");			
+			
 			
 		IntroSound = Assets.getSound ("soundTheme");		
 		}

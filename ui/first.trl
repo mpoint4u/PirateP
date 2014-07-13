@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Widget item="y" tlversion="1.4.1"
+line0="Widget"
+line1="h=&quot;{*h*}&quot;"
+line2="id=&quot;{*id*}&quot;"
+line3="w=&quot;{*w*}&quot;">
+<h type="Text" ref="y">800</h>
+<id type="Text">'myMain'</id>
+<w type="Text">480</w>
+<ColorWidget item="y"
+line0="ColorWidget"
+line1="color=&quot;{*color*}&quot;"
+line2="h=&quot;{*h*}&quot;"
+line3="top=&quot;{*top*}&quot;"
+line4="w=&quot;{*w*}&quot;"
+line5="id=&quot;{*id*}&quot;"
+line6="left=&quot;{*left*}&quot;">
+<color type="Text" ref="y">0x0000FF</color>
+<h type="Text">400</h>
+<top type="Text">200</top>
+<w type="Text">200</w>
+<id type="Text">'custom'</id>
+<left type="Text">(#Widget(myMain).w - 200)/2</left>
+</ColorWidget>
+<VBox item="y"
+line0="VBox"
+line1="h=&quot;{*h*}&quot;"
+line2="top=&quot;{*top*}&quot;"
+line3="skin:Paint-border=&quot;{*skin:Paint-border*}&quot;"
+line4="padding=&quot;{*padding*}&quot;"
+line5="childPadding=&quot;{*childPadding*}&quot;"
+line6="on-click=&quot;{*on-click*}&quot;"
+line7="w=&quot;{*w*}&quot;"
+line8="id=&quot;{*id*}&quot;"
+line9="left=&quot;{*left*}&quot;">
+<h type="Text" ref="y">400</h>
+<top type="Text">#ColorWidget(custom).y</top>
+<skin:Paint-border type="Text">1</skin:Paint-border>
+<padding type="Text">20</padding>
+<childPadding type="Text">15</childPadding>
+<on-click type="Text">trace($this.w);</on-click>
+<w type="Text">200</w>
+<id type="Text">'myVBox'</id>
+<left type="Text">#ColorWidget(custom).x</left>
+<Text item="y"
+line0="Text"
+line1="text=&quot;{*text*}&quot;">
+<text type="Text" ref="y">'My 1st text widget!'</text>
+</Text>
+<Text item="y">
+<text>'My 2nd text widget!'</text>
+</Text>
+<Text item="y">
+<text>'My 3rd text widget!'</text>
+</Text>
+<Text item="y">
+<text>'My 4th text widget!'</text>
+</Text>
+<Text item="y">
+<text>'My 5th text widget!'</text>
+</Text>
+<Text item="y">
+<text>'My 6th text widget!'</text>
+</Text>
+<Text item="y">
+<text>'My 7th text widget!'</text>
+</Text>
+<Text item="y">
+<text>'My 8th text widget!'</text>
+</Text>
+<Button item="y"
+line0="Button"
+line1="text=&quot;{*text*}&quot;"
+line2="skin:Paint-color=&quot;{*skin:Paint-color*}&quot;"
+line3="on-click=&quot;{*on-click*}&quot;">
+<text type="Text" ref="y">'set random color'</text>
+<skin:Paint-color type="Text">0x999999</skin:Paint-color>
+<on-click type="Text">#ColorWidget(custom).color = Std.random(0xFFFFFF); #custom.refresh();</on-click>
+</Button>
+</VBox>
+</Widget>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Widget id="'myMain'"
+	w="480"
+	h="800"
+	>
+		
+	<ColorWidget id="'custom'" 
+			w="200" h="400"
+	
+			left="(#Widget(myMain).w - 200)/2"
+			top="200" 
+			color="0x0000FF"
+			/>
+			
+	
+	<VBox 	id="'myVBox'"
+			skin:Paint-border="1" 
+			
+			w="200" h="400" 			
+			left="#ColorWidget(custom).x" 
+			top="#ColorWidget(custom).y"
+			padding="20" 
+			childPadding="7"
+			
+			on-click="trace($this.w);"
+			>
+			
+		<Text text="'My 1st text widget!'"/>
+		<Text text="'My 2nd text widget!'"/>
+		<Text text="'My 3rd text widget!'"/>
+		<Text text="'My 4th text widget!'"/>
+		<Text text="'My 5th text widget!'"/>
+		<Text text="'My 6th text widget!'"/>
+		<Text text="'My 7th text widget!'"/>
+		<Text text="'My 8th text widget!'"/>
+		
+			
+		<Button text="'set random color'" skin:Paint-color="0x999999" 
+				on-click="
+					//trace($this.w);
+					#ColorWidget(custom).color = Std.random(0xFFFFFF);    
+					#custom.refresh();
+					"
+					/>
+		
+	</VBox>
+</Widget>
+
