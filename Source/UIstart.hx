@@ -5,13 +5,14 @@ import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.media.Sound;
 import ru.stablex.ui.UIBuilder;
+import ru.stablex.ui.widgets.Widget;
 
 /**
  * ...
  * @author pm
  */
-class UIstart extends Sprite
-{
+class UIstart extends ru.stablex.ui.widgets.Widget { // Sprite {
+
 	// public member vars
 	public var currentScale:Float;
 	
@@ -36,8 +37,11 @@ class UIstart extends Sprite
 	private function initialize():Void {
 			trace("called initialize() in UIstart.hx ...");
 			
-		UIBuilder.regClass('ColorWidget');		
-			trace("regClass('ColorWidget') from initialize() in UIstart.hx");
+        //register Main so we can use it in xml.
+        UIBuilder.regClass("Main");			
+			
+		//  UIBuilder.regClass('ColorWidget');	  // used in 'ui/5th.xml'	
+		//	trace("regClass('ColorWidget') from initialize() in UIstart.hx");
 	}
 	
 	private function constructUI ():Void {
@@ -46,7 +50,8 @@ class UIstart extends Sprite
 		addChild( UIBuilder.buildFn(
 		//			feed some xml - layout into here
 		// like so	
-		//			'ui/5th.xml'
+		//			'ui/5th.xml'		//			
+					'ui/index.xml'
 		
 													)() );
 		
