@@ -44,12 +44,10 @@ class UIstart extends Sprite
 			trace("called constructUI() in UIstart.hx ...");
 			
 		addChild( UIBuilder.buildFn(
-	//					'ui/first.xml'
-	//					'ui/second.xml'
-	//				'ui/third.xml'
-	//				'ui/4th.xml'
-					'ui/5th.xml'
-				
+		//			feed some xml - layout into here
+		// like so	
+		//			'ui/5th.xml'
+		
 													)() );
 		
 		trace("added new widget as child to stage...");			
