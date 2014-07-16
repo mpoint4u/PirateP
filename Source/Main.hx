@@ -77,8 +77,8 @@ class Main extends ru.stablex.ui.widgets.Widget{ //Sprite {
 			
 			
 			
-		Background = new Bitmap (Assets.getBitmapData ("images/background_tile.png"));
-		Footer = new Bitmap (Assets.getBitmapData ("images/center_bottom.png"));
+		Background = new Bitmap (Assets.getBitmapData ("Assets/images/background_tile.png"));
+		Footer = new Bitmap (Assets.getBitmapData ("Assets/images/center_bottom.png"));
 		//FirstUI = new PiratePigGame ();
 		FirstUI = new UIstart();
 	}
