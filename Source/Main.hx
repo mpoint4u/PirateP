@@ -10,9 +10,10 @@ import flash.Lib;
 import piratepig.PiratePigGame;
 import openfl.Assets;
 import ru.stablex.ui.UIBuilder;
+import ru.stablex.ui.widgets.Widget;
 
 
-class Main extends Sprite {
+class Main extends ru.stablex.ui.widgets.Widget{ //Sprite {
 	
 	
 	private var Background:Bitmap;
@@ -29,7 +30,11 @@ class Main extends Sprite {
 		initialize ();
 		construct ();
 		
-		resize (stage.stageWidth, stage.stageHeight);
+		resize (
+				stage.stageWidth, 
+				stage.stageHeight,
+					true
+					);
 		stage.addEventListener (Event.RESIZE, stage_onResize);	
 	}
 	
@@ -42,7 +47,23 @@ class Main extends Sprite {
 		//       flash.Lib.current.stage.addChild(...);
 		flash.Lib.current.stage.addChild (Background);
 		flash.Lib.current.stage.addChild (Footer);
-		flash.Lib.current.stage.addChild (FirstUI);     //means the same here as ... addChild (startupUI);		
+		
+		
+		///******** THIS IS THE DUMMY WAY TO DO THIS ***************///
+		//flash.Lib.current.stage.addChild (FirstUI);     //means the same here as ... addChild (startupUI);
+		
+		//UIBuilder.regClass('ColorWidget');	  // used in 'ui/5th.xml'	
+		//trace("regClass('ColorWidget') in Main.hx");
+		
+		flash.Lib.current.stage.addChild (
+		
+				UIBuilder.buildFn(
+									'ui/dummy.xml'		
+									// for some unknown reason here 'index.xml' cannot be used ???!?	
+							)()		
+		);	
+		
+		///******** THIS IS THE DUMMY WAY TO DO THIS ***************///
 	}
 	
 	
@@ -63,7 +84,7 @@ class Main extends Sprite {
 	}
 	
 	
-	private function resize (newWidth:Int, newHeight:Int):Void {
+	override public function resize (newWidth:Float, newHeight:Float, keepPercentage:Bool = false ):Void {
 			trace("called resize() in Main.hx ...");			
 		Background.width = newWidth;
 		Background.height = newHeight;
@@ -83,7 +104,7 @@ class Main extends Sprite {
 		
 			trace("called stage_onResize() in Main.hx ...");
 		
-		resize (stage.stageWidth, stage.stageHeight);
+		resize (stage.stageWidth, stage.stageHeight, true);
 	}
 	
 } // end of class 'Main'

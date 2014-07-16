@@ -11,7 +11,7 @@ import ru.stablex.ui.widgets.Widget;
  * ...
  * @author pm
  */
-class UIstart extends ru.stablex.ui.widgets.Widget { // Sprite {
+class UIstart extends Sprite {    //  ru.stablex.ui.widgets.Widget { // 
 
 	// public member vars
 	public var currentScale:Float;
@@ -38,24 +38,38 @@ class UIstart extends ru.stablex.ui.widgets.Widget { // Sprite {
 			trace("called initialize() in UIstart.hx ...");
 			
         //register Main so we can use it in xml.
-        UIBuilder.regClass("Main");			
+        //UIBuilder.regClass("Main");	        
+		
+		//register this class so we can use it in xml.
+        UIBuilder.regClass("UIstart");			
 			
 		//  UIBuilder.regClass('ColorWidget');	  // used in 'ui/5th.xml'	
 		//	trace("regClass('ColorWidget') from initialize() in UIstart.hx");
 	}
 	
 	private function constructUI ():Void {
-			trace("called constructUI() in UIstart.hx ...");
+			//trace("called constructUI() in UIstart.hx ...");
 			
-		addChild( UIBuilder.buildFn(
+		//addChild(
+		
 		//			feed some xml - layout into here
 		// like so	
-		//			'ui/5th.xml'		//			
-					'ui/index.xml'
+		//UIBuilder.buildFn(
+	
+/*				UIBuilder.buildFn(
+				
+							'index.xml'
+				
+										)() 
+						);*/
+						
+/*		UIBuilder.buildFn(
+
+		'ui/index.xml'		
 		
-													)() );
+							)() );	*/					
 		
-		trace("added new widget as child to stage...");			
+		//trace("added new widget as child to stage...");			
 			
 			
 		IntroSound = Assets.getSound ("soundTheme");		
@@ -72,7 +86,7 @@ class UIstart extends ru.stablex.ui.widgets.Widget { // Sprite {
 			
 	
 	// resizing the startup-UI...
-	public function resize (newWidth:Int, newHeight:Int):Void {
+	public function resize (newWidth:Float, newHeight:Float):Void {
 
 		// TODO:  	implement your own algorithm to
 		// 			calculate the optimal width & height of your app
