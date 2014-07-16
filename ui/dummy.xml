@@ -19,7 +19,7 @@
     >
         <Box padding="10"> <!-- this widget will be taken by Scroll widget as scrolled content -->
 
-            <Bmp src="'images/map.jpg'"/>
+            <Bmp src="'Assets/images/map.jpg'"/>
         </Box>
     </Scroll>
 
@@ -37,7 +37,7 @@
     >
         <Box widthPt="100" childPadding="5" paddingTop="10" paddingBottom="10"> <!-- this widget will be taken by Scroll widget as scrolled content -->
             <meta:repeat times="40">
-                <Widget skin:Tile-border="4" skin:Tile-src="'images/nme.png'" skin:Tile-corners="[20]" widthPt="100" h="50"/>
+                <Widget skin:Tile-border="4" skin:Tile-src="'Assets/images/nme.png'" skin:Tile-corners="[20]" widthPt="100" h="50"/>
             </meta:repeat>
         </Box>
     </Scroll>
